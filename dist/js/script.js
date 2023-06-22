@@ -37,26 +37,43 @@ window.addEventListener("click", function (e) {
 });
 
 // Darkmode toggle
-const darkToggle = document.querySelector("#dark-toggle");
+const darkToggle1 = document.querySelector("#dark-toggle1");
+const darkToggle2 = document.querySelector("#dark-toggle2");
 const html = document.querySelector("html");
 
-darkToggle.addEventListener("click", function () {
-  if (darkToggle.checked) {
+function updateDarkModeStatus(isDarkMode) {
+  if (isDarkMode) {
     html.classList.add("dark");
     localStorage.theme = "dark";
   } else {
     html.classList.remove("dark");
     localStorage.theme = "light";
   }
+}
+
+darkToggle1.addEventListener("click", function () {
+  updateDarkModeStatus(darkToggle1.checked);
+  darkToggle2.checked = darkToggle1.checked;
+});
+
+darkToggle2.addEventListener("click", function () {
+  updateDarkModeStatus(darkToggle2.checked);
+  darkToggle1.checked = darkToggle2.checked;
 });
 
 // Pindah posisi toggle sesuai mode
-if (
-  localStorage.theme === "dark" ||
-  (!("theme" in localStorage) &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches)
-) {
-  darkToggle.checked = true;
-} else {
-  darkToggle.checked = false;
+if (localStorage.theme === "dark") {
+  darkToggle1.checked = true;
+  darkToggle2.checked = true;
+  html.classList.add("dark");
 }
+
+darkToggle1.addEventListener("click", function () {
+  updateDarkModeStatus(darkToggle1.checked);
+  darkToggle2.checked = darkToggle1.checked;
+});
+
+darkToggle2.addEventListener("click", function () {
+  updateDarkModeStatus(darkToggle2.checked);
+  darkToggle1.checked = darkToggle2.checked;
+});
