@@ -99,7 +99,7 @@ input:checked + label {
 }
 
 input:checked + label:after {
-  left: 36px;
+  left: 39px;
   transform: translateX(-20%);
   background: linear-gradient(120deg, #3a3a3a, #777, #ffffff);
 }
