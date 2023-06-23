@@ -8,20 +8,31 @@ function hideLoader() {
   document.getElementById("loader").style.display = "none";
 }
 
-// Cek apakah semua elemen telah dimuat
-function checkDOMLoaded() {
-  if (document.readyState === "complete") {
-    hideLoader();
+// Memulai perhitungan waktu
+var startTime = performance.now();
+
+// Event listener saat konten telah dimuat
+document.addEventListener("DOMContentLoaded", function () {
+  // Menghitung waktu yang dibutuhkan untuk memuat konten
+  var endTime = performance.now();
+  var loadTime = endTime - startTime;
+
+  // Menentukan waktu minimum tampilan loader (2 detik)
+  var minLoaderTime = 2000;
+
+  // Menampilkan loader minimal selama 2 detik atau sesuai dengan waktu yang dibutuhkan untuk memuat konten
+  if (loadTime < minLoaderTime) {
+    var remainingTime = minLoaderTime - loadTime;
+    setTimeout(function () {
+      hideLoader();
+    }, remainingTime);
   } else {
-    showLoader();
+    hideLoader();
   }
-}
+});
 
-// Panggil fungsi checkDOMLoaded saat DOM telah dimuat
-document.addEventListener("DOMContentLoaded", checkDOMLoaded);
-
-// Panggil fungsi checkDOMLoaded saat semua elemen telah dimuat
-window.addEventListener("load", checkDOMLoaded);
+// Contoh penggunaan
+showLoader();
 
 // Navbar Fixed
 window.onscroll = function () {
