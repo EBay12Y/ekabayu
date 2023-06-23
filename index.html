@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="/dist/img/favicon.png" />
     <link href="dist/css/final.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
       if (
         localStorage.theme === "dark" ||
@@ -348,8 +349,8 @@
 
     <!-- Skill Section Start -->
     <section id="skills" class="pt-36 pb-32 dark:bg-dark">
-      <div class="container">
-        <div class="w-full px-4">
+      <div id="particles-js" class="container">
+        <div id="particles-js" class="w-full px-4">
           <div class="mx-auto mb-16 text-center">
             <h4 class="mb-2 text-lg font-semibold uppercase text-primary">
               SKILLS
@@ -754,7 +755,7 @@
           <div class="mb-5 flex items-center justify-center">
             <!-- Instagram -->
             <a
-              href="https://www.instagram.com/ekabayu_12"
+              href="https://www.instagram.com/ekabayu_"
               class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-secondary hover:border-primary hover:bg-primary hover:text-white"
               target="_blank"
             >
@@ -864,7 +865,7 @@
           <p class="text-center text-sm font-medium text-slate-500">
             © 2023 | by
             <a
-              href="https://instagram.com/ekabayu_12"
+              href="https://instagram.com/ekabayu_"
               target="_blank"
               class="font-bold text-primary"
               >Eka Bayu Satriawan</a
@@ -886,9 +887,122 @@
     <!-- Back to top End -->
 
     <script defer src="dist/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
+    <!-- <script>
+      particleJS('#particles-js', {
+      "particles": {
+        "number": {
+          "value": 250,
+          "density": {
+            "enable": true,
+            "value_area": 250
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 4
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.27569909413154775,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 1,
+            "opacity_min": 0,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 4,
+            "size_min": 0.3,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": false,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 0.5,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 600
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "bubble"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 250,
+            "size": 0,
+            "duration": 2,
+            "opacity": 0,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 400,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+      });
+    </script> -->
   </body>
 </html>
