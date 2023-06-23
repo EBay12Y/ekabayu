@@ -1,3 +1,26 @@
+// Pesan Untuk Hacher
+console.log(`
+██╗░░██╗░█████╗░░█████╗░██╗░░██╗███████╗██████╗░
+██║░░██║██╔══██╗██╔══██╗██║░██╔╝██╔════╝██╔══██╗
+███████║███████║██║░░╚═╝█████═╝░█████╗░░██████╔╝
+██╔══██║██╔══██║██║░░██╗██╔═██╗░██╔══╝░░██╔══██╗
+██║░░██║██║░░██║╚█████╔╝██║░╚██╗███████╗██║░░██║
+╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝
+
+░░░░░██╗░█████╗░███╗░░██╗░██████╗░░█████╗░███╗░░██╗
+░░░░░██║██╔══██╗████╗░██║██╔════╝░██╔══██╗████╗░██║
+░░░░░██║███████║██╔██╗██║██║░░██╗░███████║██╔██╗██║
+██╗░░██║██╔══██║██║╚████║██║░░╚██╗██╔══██║██║╚████║
+╚█████╔╝██║░░██║██║░╚███║╚██████╔╝██║░░██║██║░╚███║
+░╚════╝░╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝╚═╝░░╚══╝
+
+███╗░░░███╗███████╗███╗░░██╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░██╗░██████╗░██╗
+████╗░████║██╔════╝████╗░██║╚██╗░██╔╝██╔════╝██╔══██╗██╔══██╗████╗░██║██╔════╝░██║
+██╔████╔██║█████╗░░██╔██╗██║░╚████╔╝░█████╗░░██████╔╝███████║██╔██╗██║██║░░██╗░██║
+██║╚██╔╝██║██╔══╝░░██║╚████║░░╚██╔╝░░██╔══╝░░██╔══██╗██╔══██║██║╚████║██║░░╚██╗╚═╝
+██║░╚═╝░██║███████╗██║░╚███║░░░██║░░░███████╗██║░░██║██║░░██║██║░╚███║╚██████╔╝██╗
+╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░╚═╝`);
+
 // Tampilkan loader
 function showLoader() {
   document.getElementById("loader").style.display = "flex";
@@ -118,7 +141,7 @@ const texts = ["kenapa harus saya?", "saya juga bisa kok (:"]; // Array berisi t
 const typingDelay = 100; // Delay antara pengetikan setiap karakter
 const erasingDelay = 50; // Delay antara penghapusan setiap karakter
 const newTextDelay = 2000; // Delay sebelum teks baru muncul setelah selesai mengetik atau menghapus
-const pauseDelay = 2500; // Jeda setelah selesai mengetik sebelum menghapus
+const pauseDelay = 2000; // Jeda setelah selesai mengetik sebelum menghapus
 
 let textIndex = 0; // Indeks teks saat ini dalam array texts
 let charIndex = 0; // Indeks karakter saat ini dalam teks yang sedang ditampilkan
