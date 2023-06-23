@@ -1,3 +1,28 @@
+// Tampilkan loader
+function showLoader() {
+  document.getElementById("loader").style.display = "flex";
+}
+
+// Sembunyikan loader
+function hideLoader() {
+  document.getElementById("loader").style.display = "none";
+}
+
+// Cek apakah semua elemen telah dimuat
+function checkDOMLoaded() {
+  if (document.readyState === "complete") {
+    hideLoader();
+  } else {
+    showLoader();
+  }
+}
+
+// Panggil fungsi checkDOMLoaded saat DOM telah dimuat
+document.addEventListener("DOMContentLoaded", checkDOMLoaded);
+
+// Panggil fungsi checkDOMLoaded saat semua elemen telah dimuat
+window.addEventListener("load", checkDOMLoaded);
+
 // Navbar Fixed
 window.onscroll = function () {
   const header = document.querySelector("header");

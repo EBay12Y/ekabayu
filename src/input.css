@@ -6,6 +6,25 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+#loader {
+  display: none;
+}
+
+.name {
+  animation: loaderAnimation 1s infinite alternate;
+}
+
+@keyframes loaderAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .navbar-fixed {
   @apply fixed z-[9999] bg-white bg-opacity-75 backdrop-blur dark:bg-dark dark:bg-opacity-90;
   border-bottom-color: #0284c7;
