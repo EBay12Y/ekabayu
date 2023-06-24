@@ -22,43 +22,43 @@ console.log(`
 ╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░╚═╝`);
 
 // Tampilkan loader
-function showLoader() {
-  document.getElementById("loader").style.display = "flex";
-}
+const showLoader = () => {
+  const loader = document.getElementById("loader");
+  loader.style.display = "flex";
+};
 
 // Sembunyikan loader
-function hideLoader() {
-  document.getElementById("loader").style.display = "none";
-}
+const hideLoader = () => {
+  const loader = document.getElementById("loader");
+  loader.style.display = "none";
+};
 
 // Memulai perhitungan waktu
-var startTime = performance.now();
+const startTime = performance.now();
 
-// Event listener saat konten telah dimuat
-window.addEventListener("load", function () {
+// Event handler saat seluruh konten telah dimuat
+window.onload = () => {
   // Menghitung waktu yang dibutuhkan untuk memuat konten
-  var endTime = performance.now();
-  var loadTime = endTime - startTime;
+  const endTime = performance.now();
+  const loadTime = endTime - startTime;
 
   // Menentukan waktu minimum tampilan loader (2 detik)
-  var minLoaderTime = 2000;
+  const minLoaderTime = 2000;
 
   // Menampilkan loader minimal selama 2 detik atau sesuai dengan waktu yang dibutuhkan untuk memuat konten
   if (loadTime < minLoaderTime) {
-    var remainingTime = minLoaderTime - loadTime;
-    setTimeout(function () {
-      hideLoader();
-    }, remainingTime);
+    const remainingTime = minLoaderTime - loadTime;
+    setTimeout(hideLoader, remainingTime);
   } else {
     hideLoader();
   }
-});
+};
 
 // Contoh penggunaan
 showLoader();
 
 // Navbar Fixed
-window.onscroll = function () {
+window.onscroll = () => {
   const header = document.querySelector("header");
   const fixedNav = header.offsetTop;
   const toTop = document.querySelector("#to-top");
@@ -78,16 +78,16 @@ window.onscroll = function () {
 const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("#nav-menu");
 
-hamburger.addEventListener("click", function () {
+hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("hamburger-active");
   navMenu.classList.toggle("hidden");
 });
 
 // Klik di luar hamburger
-window.addEventListener("click", function (e) {
+window.addEventListener("click", (e) => {
   if (
-    e.target != hamburger &&
-    e.target != navMenu &&
+    e.target !== hamburger &&
+    e.target !== navMenu &&
     !navMenu.contains(e.target)
   ) {
     hamburger.classList.remove("hamburger-active");
@@ -100,7 +100,7 @@ const darkToggle1 = document.querySelector("#dark-toggle1");
 const darkToggle2 = document.querySelector("#dark-toggle2");
 const html = document.querySelector("html");
 
-function updateDarkModeStatus(isDarkMode) {
+const updateDarkModeStatus = (isDarkMode) => {
   if (isDarkMode) {
     html.classList.add("dark");
     localStorage.theme = "dark";
@@ -108,14 +108,14 @@ function updateDarkModeStatus(isDarkMode) {
     html.classList.remove("dark");
     localStorage.theme = "light";
   }
-}
+};
 
-darkToggle1.addEventListener("click", function () {
+darkToggle1.addEventListener("click", () => {
   updateDarkModeStatus(darkToggle1.checked);
   darkToggle2.checked = darkToggle1.checked;
 });
 
-darkToggle2.addEventListener("click", function () {
+darkToggle2.addEventListener("click", () => {
   updateDarkModeStatus(darkToggle2.checked);
   darkToggle1.checked = darkToggle2.checked;
 });
@@ -127,12 +127,12 @@ if (localStorage.theme === "dark") {
   html.classList.add("dark");
 }
 
-darkToggle1.addEventListener("click", function () {
+darkToggle1.addEventListener("click", () => {
   updateDarkModeStatus(darkToggle1.checked);
   darkToggle2.checked = darkToggle1.checked;
 });
 
-darkToggle2.addEventListener("click", function () {
+darkToggle2.addEventListener("click", () => {
   updateDarkModeStatus(darkToggle2.checked);
   darkToggle1.checked = darkToggle2.checked;
 });
@@ -152,11 +152,11 @@ const typedTextElements = [
   document.getElementById("typed-text-2")
 ];
 
-function type() {
+const type = () => {
   const text = texts[textIndex]; // Mendapatkan teks yang sedang ditampilkan
   const char = text[charIndex]; // Mendapatkan karakter saat ini dalam teks
 
-  typedTextElements.forEach(typedTextElement => {
+  typedTextElements.forEach((typedTextElement) => {
     if (isDeleting) {
       typedTextElement.textContent = text.substring(0, charIndex - 1);
     } else {
@@ -192,8 +192,8 @@ function type() {
   }
 
   setTimeout(type, delay);
-}
+};
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   setTimeout(type, typingDelay);
 });
