@@ -703,6 +703,10 @@ video {
   height: 1.25rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .h-9 {
   height: 2.25rem;
 }
@@ -713,10 +717,6 @@ video {
 
 .h-4 {
   height: 1rem;
-}
-
-.h-24 {
-  height: 6rem;
 }
 
 .w-full {
