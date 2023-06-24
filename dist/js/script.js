@@ -35,7 +35,7 @@ function hideLoader() {
 var startTime = performance.now();
 
 // Event listener saat konten telah dimuat
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
   // Menghitung waktu yang dibutuhkan untuk memuat konten
   var endTime = performance.now();
   var loadTime = endTime - startTime;
