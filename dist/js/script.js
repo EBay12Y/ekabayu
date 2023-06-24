@@ -137,7 +137,7 @@ darkToggle2.addEventListener("click", function () {
   darkToggle1.checked = darkToggle2.checked;
 });
 
-const texts = ["kenapa harus saya?", "saya juga bisa kok (:"]; // Array berisi teks yang ingin ditampilkan secara bergantian
+const texts = ["kenapa harus saya?", "saya juga bisa dong (:"]; // Array berisi teks yang ingin ditampilkan secara bergantian
 const typingDelay = 100; // Delay antara pengetikan setiap karakter
 const erasingDelay = 50; // Delay antara penghapusan setiap karakter
 const newTextDelay = 2000; // Delay sebelum teks baru muncul setelah selesai mengetik atau menghapus
@@ -147,17 +147,22 @@ let textIndex = 0; // Indeks teks saat ini dalam array texts
 let charIndex = 0; // Indeks karakter saat ini dalam teks yang sedang ditampilkan
 let isDeleting = false; // Menandakan apakah dalam mode penghapusan karakter
 
-const typedTextElement = document.getElementById("typed-text");
+const typedTextElements = [
+  document.getElementById("typed-text-1"),
+  document.getElementById("typed-text-2")
+];
 
 function type() {
   const text = texts[textIndex]; // Mendapatkan teks yang sedang ditampilkan
   const char = text[charIndex]; // Mendapatkan karakter saat ini dalam teks
 
-  if (isDeleting) {
-    typedTextElement.textContent = text.substring(0, charIndex - 1);
-  } else {
-    typedTextElement.textContent = text.substring(0, charIndex + 1);
-  }
+  typedTextElements.forEach(typedTextElement => {
+    if (isDeleting) {
+      typedTextElement.textContent = text.substring(0, charIndex - 1);
+    } else {
+      typedTextElement.textContent = text.substring(0, charIndex + 1);
+    }
+  });
 
   if (isDeleting) {
     charIndex--;

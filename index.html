@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="/dist/img/favicon.png" />
     <link href="dist/css/final.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
       if (
         localStorage.theme === "dark" ||
@@ -121,7 +120,6 @@
         </div>
       </div>
     </header>
-
     <!-- Header Section End -->
     <!-- Hero Section Start -->
     <section id="home" class="pt-36 dark:bg-dark">
@@ -147,25 +145,22 @@
                 >Content Creator</span
               >
             </h2>
-            <div class="mb-5 flex">
+            <div class="flex md:mb-8">
               <div class="font-semibold text-slate-500 dark:text-slate-400">
-                Kalau orang lain bisa,&nbsp;
+                Kalau orang lain aja bisa,&nbsp;
               </div>
               <div
-                id="typed-text"
-                class="font-semibold text-dark dark:text-white"
+                id="typed-text-1"
+                class="hidden text-dark dark:text-white md:block md:font-semibold"
               ></div>
             </div>
-            <p class="mb-10 font-medium leading-relaxed text-secondary">
-              I am 21 years old. Now, I am an Information Technology student at
-              Brawijaya University. I am currently studying Web Development,
-              Mobile App Development and UI/UX Design. I am also interested in
-              graphic design or creating content as my hobby.
-            </p>
-
+            <div
+              id="typed-text-2"
+              class="mt-1 mb-10 block h-5 font-semibold text-dark dark:text-white md:hidden"
+            ></div>
             <a
               href="#about"
-              class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg"
+              class="mt-10 rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg"
               >About Me</a
             >
           </div>
@@ -186,7 +181,7 @@
       </div>
     </section>
     <!-- Hero Section End -->
-
+    <div id="particles-js-1"></div>
     <!-- Portofolio Section Start -->
     <section id="portofolio" class="bg-slate-100 pt-36 pb-16 dark:bg-slate-800">
       <div class="container">
@@ -346,11 +341,11 @@
       </div>
     </section>
     <!-- Portofolio Section End -->
-
+    <div id="particles-js-2"></div>
     <!-- Skill Section Start -->
     <section id="skills" class="pt-36 pb-32 dark:bg-dark">
-      <div id="particles-js" class="container">
-        <div id="particles-js" class="w-full px-4">
+      <div class="container">
+        <div class="w-full px-4">
           <div class="mx-auto mb-16 text-center">
             <h4 class="mb-2 text-lg font-semibold uppercase text-primary">
               SKILLS
@@ -364,10 +359,10 @@
               Berikut merupakan berapa tech stack yang pernah saya pakai selama
               belajar dan mengembangkan project.
             </p>
-            <div class="flex flex-wrap justify-center p-5">
+            <div class="flex flex-wrap justify-center py-5">
               <!-- Next Js -->
               <div
-                class="aos-init aos-animate mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 font-semibold hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:w-1/5"
+                class="aos-init aos-animate mx-1 my-2 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:mx-2 md:my-5 md:w-1/5 md:font-semibold"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="100"
@@ -381,7 +376,7 @@
               </div>
               <!-- React JS -->
               <div
-                class="aos-init aos-animate mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 font-semibold hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:w-1/5"
+                class="aos-init aos-animate mx-1 my-2 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:mx-2 md:my-5 md:w-1/5 md:font-semibold"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="100"
@@ -395,7 +390,7 @@
               </div>
               <!-- Tailwind CSS -->
               <div
-                class="aos-init aos-animate mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 font-semibold hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:w-1/5"
+                class="aos-init aos-animate mx-1 my-2 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:mx-2 md:my-5 md:w-1/5 md:font-semibold"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="100"
@@ -409,7 +404,7 @@
               </div>
               <!-- Bootstrap -->
               <div
-                class="aos-init aos-animate mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 font-semibold hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:w-1/5"
+                class="aos-init aos-animate mx-1 my-2 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:mx-2 md:my-5 md:w-1/5 md:font-semibold"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="100"
@@ -423,7 +418,7 @@
               </div>
               <!-- GraphQL -->
               <div
-                class="aos-init aos-animate mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 font-semibold hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:w-1/5"
+                class="aos-init aos-animate mx-1 my-2 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:mx-2 md:my-5 md:w-1/5 md:font-semibold"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="100"
@@ -437,7 +432,7 @@
               </div>
               <!-- Firebase -->
               <div
-                class="aos-init aos-animate mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 font-semibold hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:w-1/5"
+                class="aos-init aos-animate mx-1 my-2 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:mx-2 md:my-5 md:w-1/5 md:font-semibold"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="100"
@@ -451,7 +446,7 @@
               </div>
               <!-- Java -->
               <div
-                class="aos-init aos-animate mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 font-semibold hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:w-1/5"
+                class="aos-init aos-animate mx-1 my-2 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:mx-2 md:my-5 md:w-1/5 md:font-semibold"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="100"
@@ -465,7 +460,7 @@
               </div>
               <!-- JavaScript -->
               <div
-                class="aos-init aos-animate mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 font-semibold hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:w-1/5"
+                class="aos-init aos-animate mx-1 my-2 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:mx-2 md:my-5 md:w-1/5 md:font-semibold"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="100"
@@ -479,7 +474,7 @@
               </div>
               <!-- Capcut -->
               <div
-                class="aos-init aos-animate mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 font-semibold hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:w-1/5"
+                class="aos-init aos-animate mx-1 my-2 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:mx-2 md:my-5 md:w-1/5 md:font-semibold"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="100"
@@ -493,7 +488,7 @@
               </div>
               <!-- Premiere Pro -->
               <div
-                class="aos-init aos-animate mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 font-semibold hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:w-1/5"
+                class="aos-init aos-animate mx-1 my-2 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:mx-2 md:my-5 md:w-1/5 md:font-semibold"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="100"
@@ -507,7 +502,7 @@
               </div>
               <!-- Figma -->
               <div
-                class="aos-init aos-animate mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 font-semibold hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:w-1/5"
+                class="aos-init aos-animate mx-1 my-2 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:mx-2 md:my-5 md:w-1/5 md:font-semibold"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="100"
@@ -521,7 +516,7 @@
               </div>
               <!-- Photoshop -->
               <div
-                class="aos-init aos-animate mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 font-semibold hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:w-1/5"
+                class="aos-init aos-animate mx-1 my-2 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl border-2 border-solid border-gray-400 bg-slate-100 p-5 hover:bg-gray-200 dark:bg-slate-300 dark:hover:bg-slate-100 md:mx-2 md:my-5 md:w-1/5 md:font-semibold"
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 data-aos-delay="100"
@@ -536,41 +531,12 @@
             </div>
           </div>
         </div>
-
-        <div class="w-full px-4">
-          <div class="flex flex-wrap items-center justify-center">
-            <a
-              href="#"
-              class="greyscale mx-4 max-w-[120px] py-4 opacity-75 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
-            >
-              <img src="" alt="" />
-            </a>
-            <a
-              href="#"
-              class="greyscale mx-4 max-w-[120px] py-4 opacity-75 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
-            >
-              <img src="" alt="" />
-            </a>
-            <a
-              href="#"
-              class="greyscale mx-4 max-w-[120px] py-4 opacity-75 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
-            >
-              <img src="" alt="" />
-            </a>
-            <a
-              href="#"
-              class="greyscale mx-4 max-w-[120px] py-4 opacity-75 transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
-            >
-              <img src="" alt="" />
-            </a>
-          </div>
-        </div>
       </div>
     </section>
     <!-- Skill Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="bg-slate-100 pt-36 pb-32 dark:bg-slate-800"">
+    <section id="about" class="bg-slate-100 pt-36 pb-32 dark:bg-slate-800">
       <div class="container">
         <div class="flex flex-wrap">
           <div
@@ -587,10 +553,10 @@
               Yuk Kenal Lebih Dekat
             </h2>
             <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">
-              Lahir di Kota Pahlawan dan saat ini sedang menempuh studi
-              Teknologi Informasi di Universitas Brawijaya. Tertarik pada bidang
-              teknologi dan ingin mendalami Web Development serta suka membuat
-              konten.
+              Lahir di Kota Surabaya dan saat ini sedang menempuh semester 6 di
+              prodi Teknologi Informasi di Universitas Brawijaya. Sedang
+              mempelajari Web Development, Mobile App Development, dan UI/UX,
+              serta suka membuat konten.
             </p>
           </div>
           <div
@@ -702,7 +668,7 @@
     <!-- Skill Section End -->
 
     <!-- Footer Start -->
-    <footer class="bg-slate-700 dark:bg-dark pt-24 pb-12">
+    <footer class="bg-slate-700 pt-24 pb-12 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="mb-12 w-full px-6 font-medium text-slate-300 md:w-1/3">
@@ -711,8 +677,9 @@
             <p>ekabayusatriawan@gmail.com</p>
             <p>Surabaya, Jawa Timur</p>
           </div>
-          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
-          </div>
+          <div
+            class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3"
+          ></div>
           <div
             class="mb-12 w-full px-4 pl-7 font-medium text-slate-300 md:w-1/3"
           >
@@ -887,122 +854,11 @@
     <!-- Back to top End -->
 
     <script defer src="dist/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    <!-- <script>
-      particleJS('#particles-js', {
-      "particles": {
-        "number": {
-          "value": 250,
-          "density": {
-            "enable": true,
-            "value_area": 250
-          }
-        },
-        "color": {
-          "value": "#ffffff"
-        },
-        "shape": {
-          "type": "circle",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
-          },
-          "polygon": {
-            "nb_sides": 4
-          },
-          "image": {
-            "src": "img/github.svg",
-            "width": 100,
-            "height": 100
-          }
-        },
-        "opacity": {
-          "value": 0.27569909413154775,
-          "random": true,
-          "anim": {
-            "enable": true,
-            "speed": 1,
-            "opacity_min": 0,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 3,
-          "random": true,
-          "anim": {
-            "enable": false,
-            "speed": 4,
-            "size_min": 0.3,
-            "sync": false
-          }
-        },
-        "line_linked": {
-          "enable": false,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 0.5,
-          "direction": "none",
-          "random": true,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 600
-          }
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "bubble"
-          },
-          "onclick": {
-            "enable": true,
-            "mode": "repulse"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 400,
-            "line_linked": {
-              "opacity": 1
-            }
-          },
-          "bubble": {
-            "distance": 250,
-            "size": 0,
-            "duration": 2,
-            "opacity": 0,
-            "speed": 3
-          },
-          "repulse": {
-            "distance": 400,
-            "duration": 0.4
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
-          }
-        }
-      },
-      "retina_detect": true
-      });
-    </script> -->
   </body>
 </html>
