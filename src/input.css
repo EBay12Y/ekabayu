@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Inter", sans-serif;
-}
-
 #loader {
   display: none;
 }
@@ -23,6 +19,10 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+body {
+  font-family: "Inter", sans-serif;
 }
 
 .navbar-fixed {

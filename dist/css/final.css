@@ -715,6 +715,10 @@ video {
   height: 1rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -790,10 +794,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .gap-3 {
@@ -1083,10 +1083,6 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body {
-  font-family: "Inter", sans-serif;
-}
-
 #loader {
   display: none;
 }
@@ -1105,6 +1101,10 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+body {
+  font-family: "Inter", sans-serif;
 }
 
 .navbar-fixed {
