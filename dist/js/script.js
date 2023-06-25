@@ -37,7 +37,7 @@ const hideLoader = () => {
 const startTime = performance.now();
 
 // Event handler saat seluruh konten telah dimuat
-window.onload = () => {
+window.addEventListener("load", () => {
   // Menghitung waktu yang dibutuhkan untuk memuat konten
   const endTime = performance.now();
   const loadTime = endTime - startTime;
@@ -52,13 +52,13 @@ window.onload = () => {
   } else {
     hideLoader();
   }
-};
+});
 
 // Contoh penggunaan
 showLoader();
 
 // Navbar Fixed
-window.onscroll = () => {
+window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
   const fixedNav = header.offsetTop;
   const toTop = document.querySelector("#to-top");
@@ -72,7 +72,7 @@ window.onscroll = () => {
     toTop.classList.remove("flex");
     toTop.classList.add("hidden");
   }
-};
+});
 
 // Hamburger
 const hamburger = document.querySelector("#hamburger");
