@@ -137,7 +137,7 @@ darkToggle2.addEventListener("click", () => {
   darkToggle1.checked = darkToggle2.checked;
 });
 
-const texts = ["kenapa harus saya?", "saya juga bisa dong (:"]; // Array berisi teks yang ingin ditampilkan secara bergantian
+const texts = ["saya juga bisa dong (:", "kenapa harus saya?"]; // Array berisi teks yang ingin ditampilkan secara bergantian
 const typingDelay = 100; // Delay antara pengetikan setiap karakter
 const erasingDelay = 50; // Delay antara penghapusan setiap karakter
 const newTextDelay = 2000; // Delay sebelum teks baru muncul setelah selesai mengetik atau menghapus
