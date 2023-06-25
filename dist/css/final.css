@@ -723,6 +723,10 @@ video {
   height: 1rem;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .w-full {
   width: 100%;
 }
@@ -749,6 +753,10 @@ video {
 
 .w-4 {
   width: 1rem;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .max-w-\[250px\] {
